@@ -25,15 +25,10 @@ var clubsCmd = &cobra.Command{
 					strconv.Itoa(club.ID),
 					club.Name,
 					fmt.Sprintf("%s (%d)", league.Name, league.ID),
-					strconv.Itoa(club.PlayerCount),
-					strconv.Itoa(club.SpecialCount),
-					strconv.Itoa(club.GoldCount),
-					strconv.Itoa(club.SilverCount),
-					strconv.Itoa(club.BronzeCount),
 				})
 			}
 		}
-		printTable([]string{"ID", "NAME", "LEAGUE (ID)", "PLAYERS", "SPECIAL", "GOLD", "SILVER", "BRONZE"}, data)
+		printTable([]string{"ID", "NAME", "LEAGUE (ID)"}, data)
 	},
 }
 

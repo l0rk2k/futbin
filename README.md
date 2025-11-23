@@ -79,6 +79,10 @@ Examples:
     futbin players --wf 5 --skills 5
 6.  # Players with Lengthy AcceleRATE:
     futbin players --accelerate=lengthy
+7.  # Players with specific PlayStyles (e.g. Finesse Shot):
+    futbin players --playstyles "Finesse Shot"
+8.  # Players with PlayStyles+ (e.g. Power Shot+):
+    futbin players --playstyles_plus "Power Shot"
 
 Flags:
       --accelerate string           Accelerate
@@ -87,6 +91,7 @@ Flags:
       --agility string              Agility
       --balance string              Balance
       --ball-control string         Ball Control
+      --body-type string            Body Type Code
       --club int                    Club ID
       --composure string            Composure
       --crossing string             Crossing
@@ -100,6 +105,7 @@ Flags:
       --interceptions string        Interceptions
       --jumping string              Jumping
       --league int                  League ID
+      --likes string                Likes count
       --long-passing string         Long Passing
       --long-shots string           Long Shots
       --marking string              Marking
@@ -110,6 +116,8 @@ Flags:
       --passing string              Passing
       --penalties string            Penalties
       --physicality string          Physicality
+      --playstyles string           PlayStyles (comma separated)
+      --playstyles-plus string      PlayStyles+ (comma separated)
       --position strings            Position
       --position-type string        Position type (default "all")
       --positioning string          Positioning

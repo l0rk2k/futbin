@@ -59,6 +59,10 @@ var (
 	flagStamina          string
 	flagStrength         string
 	flagAggression       string
+	flagBodyType         string
+	flagLikes            string
+	flagPlayStyles       string
+	flagPlayStylesPlus   string
 )
 
 // playersCmd represents the players command
@@ -126,6 +130,10 @@ var playersCmd = &cobra.Command{
 			Stamina:          flagToRange(flagStamina),
 			Strength:         flagToRange(flagStrength),
 			Aggression:       flagToRange(flagAggression),
+			BodyType:         flagBodyType,
+			Likes:            flagLikes,
+			PlayStyles:       flagPlayStyles,
+			PlayStylesPlus:   flagPlayStylesPlus,
 		})
 		cobra.CheckErr(err)
 		printPlayers(p, true, true)
@@ -180,6 +188,10 @@ func init() {
 	playersCmd.PersistentFlags().StringVar(&flagStamina, "stamina", "", "Stamina")
 	playersCmd.PersistentFlags().StringVar(&flagStrength, "strength", "", "Strength")
 	playersCmd.PersistentFlags().StringVar(&flagAggression, "aggression", "", "Aggression")
+	playersCmd.PersistentFlags().StringVar(&flagBodyType, "body-type", "", "Body Type Code")
+	playersCmd.PersistentFlags().StringVar(&flagLikes, "likes", "", "Likes count")
+	playersCmd.PersistentFlags().StringVar(&flagPlayStyles, "playstyles", "", "PlayStyles (comma separated)")
+	playersCmd.PersistentFlags().StringVar(&flagPlayStylesPlus, "playstyles-plus", "", "PlayStyles+ (comma separated)")
 }
 
 func printPlayers(p []players.Player, accelerate, allPositions bool) {

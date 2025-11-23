@@ -3,6 +3,7 @@ package cardversions
 type CardVersion struct {
 	Name string `json:"version_name"`
 	ID   string `json:"get"`
+	Img  string `json:"img"`
 }
 
 type cardVersionsData struct {
